@@ -6,4 +6,4 @@ This is a [React](https://react.dev/) web app displaying Pokémon information us
 
 [Technical Application Assessment Instructions](https://docs.google.com/document/d/1GiyVpVNNr4GkEoPWG6WUnqzEM4yUlw70oX5u-jpy7e0/edit?usp=sharing)
 
-[Figma Wireframe](https://www.figma.com/design/JSJaFQBCS2iY7kJuzrWNQk/ATC-Engineer-Practice-Exercise?node-id=0-1&t=CuuQLe3JlzZHX5M4-1)
+[Figma Wireframe](https://www.figma.com/design/airtj9sBRyYU5K7loAkZlV/Technical-Application-Assessment-Fall-2024?node-id=0-1&t=HqhttLN2szvnVMOR-0)
