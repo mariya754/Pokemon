@@ -1,10 +1,18 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './LandingPage';
+import DisplayPage from './DisplayPage';
 import "./App.css";
 
-const App = () => {
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">App</header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/' index element={<LandingPage />} />
+       
+      </Routes>
+    </Router>
   );
 };
 
