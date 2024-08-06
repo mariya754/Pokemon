@@ -10,7 +10,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path='/' index element={<LandingPage />} />
-       
+        <Route path='/display' index element={<DisplayPage />} />
       </Routes>
     </Router>
   );
