@@ -29,68 +29,58 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ name, hp, imageUrl, moves, ab
       </div>
 
 
-<div className="moves">
-  <h3 style={{ display: 'inline-block', marginRight: '5px', marginTop: '20px' }}>
-    {isSingleMove ? 'Move:' : 'Moves:'}
-  </h3>
-  {isSingleMove ? (
-    <ul style={{ padding: 0, margin: 0, listStyleType: 'none' }}>
-      <li
-        key={moves[0]}
-        onMouseEnter={() => setMoveHover(0)}
-        onMouseLeave={() => setMoveHover(null)}
-        style={{ 
-          cursor: 'pointer', 
-          marginBottom: '10px',
-          position: 'relative',
-          display: 'inline-block' 
-        }}
-      >
-        {moves[0]}
-        {moveHover === 0 && (
-          <span style={{ 
-            color: 'white', 
-            fontSize: '0.9em',
-            display: 'block', 
-            marginTop: '5px'
-          }}>
-            {movesInfo[0]}
-          </span>
-        )}
-      </li>
-    </ul>
-  ) : (
-    <ul style={{ padding: 0, margin: 0, listStyleType: 'none' }}>
-      {moves.map((move, index) => (
-        <li
-          key={index}
-          onMouseEnter={() => setMoveHover(index)}
-          onMouseLeave={() => setMoveHover(null)}
-          style={{ 
-            cursor: 'pointer', 
-            marginBottom: '10px',
-            marginLeft: '15px',
-            position: 'relative'
-          }}
-        > 
-          {move}
-          {moveHover === index && (
-            <span style={{ 
-              color: 'white', 
-              fontSize: '0.9em',
-              display: 'block', // Ensure it starts on a new line
-              marginTop: '5px' // Space between ability and description
-            }}>
-              {movesInfo[index]}
-            </span>
-          )}
-        </li>
-      ))}
-    </ul>
-  )}
-</div>
+    <div>
+      <h3 style={{ display: 'inline-block', marginRight: '5px', marginTop: '20px' }}>
+          {isSingleMove ? 'Move:' : 'Moves:'}
+        </h3>
+        {isSingleMove ? (
+          <p
+            key={moves[0]}
+            onMouseEnter={() => setMoveHover(0)}
+            onMouseLeave={() => setMoveHover(null)}
+            style={{ 
+              display: 'inline', 
+              cursor: 'pointer',
+              margin: 0,
+              fontSize: '1.2em',
+              marginTop: '5px'
+            }}
+          >
+            {moves[0]}
+            {moveHover === 0 && <span style={{ color: 'white', fontSize: '0.9em', display: 'block'}}>{movesInfo[0]}</span>}
+          </p>
+      ) : (
+        <ul style={{ padding: 0, margin: 0, listStyleType: 'none' }}>
+          {moves.map((move, index) => (
+            <li
+              key={index}
+              onMouseEnter={() => setMoveHover(index)}
+              onMouseLeave={() => setMoveHover(null)}
+              style={{ 
+                cursor: 'pointer', 
+                marginBottom: '10px',
+                marginLeft: '15px',
+                position: 'relative'
+              }}
+            > 
+              {move}
+              {moveHover === index && (
+                <span style={{ 
+                  color: 'white', 
+                  fontSize: '0.9em',
+                  display: 'block', // Ensure it starts on a new line
+                  marginTop: '5px' 
+                }}>
+                  {movesInfo[index]}
+                </span>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
 
-<div>
+    <div>
       <h3 style={{ display: 'inline-block', marginRight: '5px', marginTop: '20px' }}>
         {isSingleAbility ? 'Ability:' : 'Abilities:'}
       </h3>

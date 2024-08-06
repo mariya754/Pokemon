@@ -64,7 +64,7 @@ const DisplayPage: React.FC = () => {
         name={pokemon.name}
         hp={pokemon.stats[0]?.base_stat || 'N/A'}
         imageUrl={pokemon.sprites?.front_default || ''}
-        moves={[pokemon.moves[0]?.move?.name || 'N/A', pokemon.moves[1]?.move?.name || 'N/A']}
+        moves={[pokemon.moves[0]?.move?.name || [], pokemon.moves[1]?.move?.name || []]}
         abilities={pokemon.abilities?.filter((ability: any) => !ability.is_hidden).map((ability: any) => ability.ability.name) || []}
         movesInfo={movesInfo}
         abilitiesInfo={abilitiesInfo}
